@@ -1,9 +1,3 @@
-!doctype html>
-    <meta charset="utf-8" />
-    <style>
-    html, body { font-family: monospace; }
-    </style>
-
 <?php
 <?
 
