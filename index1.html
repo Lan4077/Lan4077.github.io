@@ -11,7 +11,25 @@
 </head>
 <body>
 <script type="text/javascript"> 
-VK.Auth.login();
+VK.Auth.login(function(response) {
+  var el = document.getElementById('b-user');
+
+  if (response.session) {
+    /* Пользователь успешно авторизовался */
+
+    if (response.session.mid && response.session.user) {
+      el.innerHTML = 'Привет, <a href="https://vk.com/id%UID%" target="_blank">%USERNAME%</a>!'
+        .replace('%USERNAME%', response.session.user.first_name + ' ' + response.session.user.last_name)
+        .replace('%UID%', response.session.user.id);
+    } else {
+      el.innerHTML = 'данные пользователя не пришли что-то';
+    }
+
+  } else {
+    /* Пользователь нажал кнопку Отмена в окне авторизации */
+    el.innerHTML = 'Пользователь не согласился';
+  }
+});
 </script>
 </body>
 </html>
