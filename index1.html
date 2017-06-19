@@ -25,13 +25,11 @@ VK.Auth.login(function(response) {
 }); 
 
 
-function showAuthData(data) {
-    $('body').append('<p>expire: ' + data.expire +'</p>');
-    $('body').append('<p>mid: ' + data.mid +'</p>');
-    $('body').append('<p>fio: ' + data.user.first_name + ' ' + data.user.last_name +'</p>');
-    $('body').append('<p>userDomain: ' + data.user.domain +'</p>');
-    $('body').append('<p>-----------------------------------------------</p>');
-}
+VK.Api.call('users.get', {user_ids: 1}, function(r) {
+  if(r.response) {
+    alert('Привет, ' + r.response[0].first_name);
+  }
+});
 </script>
 </body>
 </html>
