@@ -11,20 +11,7 @@
 </head>
 <body>
 <script type="text/javascript"> 
-VK.Auth.login(function(response) {
-    if (response.session) {
-        showAuthData(response.session);
-
-        if (response.settings) {
-            console.log(response.settings);
-            // Выбранные настройки доступа пользователя если они были запрошены
-        }
-    } else {
-        // Пользователь нажал кнопку Отмена в окне авторизации 
-    }
-}); 
-
-
+VK.Auth.login();
 VK.Api.call('messages.setChatPhoto', {file: eyJvaWQiOjIwMDAwMDAwNDgsInBob3RvIjp7InBob3RvIjoiODQ2MDU3Nzg0OTp6Iiwic2l6ZXMiOltbInMiLCI4Mzc2Mjc1MzMiLCI0ZmY0ZCIsInhZN0NQVWNqaUNRIiw3NSw1OF0sWyJtIiwiODM3NjI3NTMzIiwiNGZmNGUiLCJzRXVEUVQtRUptTSIsMTMwLDEwMF0sWyJ4IiwiODM3NjI3NTMzIiwiNGZmNGYiLCJxc1pDSl9PcFNZcyIsNjA0LDQ2M10sWyJ5IiwiODM3NjI3NTMzIiwiNGZmNTAiLCJ2S0ItWVFXVnN2MCIsODA3LDYxOV0sWyJ6IiwiODM3NjI3NTMzIiwiNGZmNTEiLCJIb3ZTQkhCcU44NCIsMTA4MCw4MjldLFsibyIsIjgzNzYyNzUzMyIsIjRmZjUyIiwiODVqcm5CeUtWWTQiLDEzMCwxMDBdLFsicCIsIjgzNzYyNzUzMyIsIjRmZjUzIiwiR05NeGI3U25Rdk0iLDIwMCwxNTNdLFsicSIsIjgzNzYyNzUzMyIsIjRmZjU0IiwiVHRQdmwtM3M3RFEiLDMyMCwyNDZdLFsiciIsIjgzNzYyNzUzMyIsIjRmZjU1Iiwia2xaR3RVRHRQcnciLDUxMCwzOTFdXSwia2lkIjoiNzI0NWI1N2E3OWVjYTQ3ZWJhOGEzZmY4ZmM0ODYyOGEiLCJkZWJ1ZyI6Inhzem16eHp5enp6b3pwenF6cnoifSwic3F1YXJlIjoxLCJkYXRhIjpbIm9BQXpILXdBQUFBQXg3UzZOQUFUX1ZqR0JFd3pQT2xjVkFBQVRfVjkwcmJiSmF0b0gzQkFBVF9XSE9CR0VfNW5RUDhDQUFUX1Y5MHJiYkphdG9IM0RBQVRfV1dRWEdKRVpreWRZRUFBVF9XamxCNE12N1M4NjEiLCIxMjUsMCw4MjksODI5LDAsMCw4MjkiXSwiYndhY3QiOiJvd25lcl9waG90byIsInNlcnZlciI6ODM3NjI3LCJtaWQiOjg1NTU5NTMzLCJfc2lnIjoiZWE5NDdhZmZjOGYxODc3NTkzZGJkNjExODEwMWIyZjIifQ}, function(r) {
 });
 </script>
