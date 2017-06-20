@@ -9,7 +9,7 @@
 <script type = "text/javascript">
   var t = new Date();
   h = t.getUTCHours () + 6; if (h > 23) {h -= 24};
-  if(h == 0 && t.getUTCMinutes() == 25 && t.getUTCSeconds() == 0 || h == 12 && t.getUTCMinutes() == 0 && t.getUTCSeconds() == 0 )
+  if(h == 0 && t.getUTCMinutes() == 25|| h == 12 && t.getUTCMinutes() == 0)
   {
      var randomnumber = Math.floor(Math.random() * 17);
      var golub = '';
