@@ -11,11 +11,17 @@
   
 </head>
 <body>
-  <script src="jquery.js"></script>
-<script>
-  $.ajax({
-    url: 'https://api.vk.com/method/messages.send?chat_id:48&message:lal&v=5.52'
+  <script src="jquery.js">
+   $.ajax({
+    url: 'https://api.vk.com/method/messages.send?chat_id:48&message:lal&v=5.52',
+    method: 'GET',
+    dataType: 'JSONP',
+     success: functuon (data) {
+     console.log(data);
+   }
   });
+  </script>
+<script>
 </script>
   
 </body>
