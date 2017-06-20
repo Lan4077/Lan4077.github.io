@@ -9,6 +9,9 @@
 <script type = "text/javascript">
   var t = new Date();
   h = t.getUTCHours () + 6; if (h > 23) {h -= 24};
+  var obnovleno = 0;
+  for (var j = 0; 20 > 1; j++)
+  {
   if(h == 0 && t.getUTCMinutes() == 27|| h == 12 && t.getUTCMinutes() == 0)
   {
      var randomnumber = Math.floor(Math.random() * 17);
@@ -86,6 +89,7 @@
      {
         golub = 'eyJvaWQiOjIwMDAwMDAwNDgsInBob3RvIjp7InBob3RvIjoiYTIyNjkwMGRkYzp6Iiwic2l6ZXMiOltbInMiLCI4Mzc2Mjg1MzMiLCI1NDM5NiIsImxWU2ZkUzlVX3c4Iiw3NSw0N10sWyJtIiwiODM3NjI4NTMzIiwiNTQzOTciLCIzamp3cnluSDBuTSIsMTMwLDgxXSxbIngiLCI4Mzc2Mjg1MzMiLCI1NDM5OCIsIlRSYlBWeUxCM3VNIiw2MDQsMzc3XSxbInkiLCI4Mzc2Mjg1MzMiLCI1NDM5OSIsImQ0UFBid25OTWM0Iiw4MDcsNTA0XSxbInoiLCI4Mzc2Mjg1MzMiLCI1NDM5YSIsIjBybHczSmgwNnBRIiwxMTMxLDcwN10sWyJvIiwiODM3NjI4NTMzIiwiNTQzOWIiLCJkZ2JOejZpUDZhTSIsMTMwLDg3XSxbInAiLCI4Mzc2Mjg1MzMiLCI1NDM5YyIsInExalJVX2hSWHprIiwyMDAsMTMzXSxbInEiLCI4Mzc2Mjg1MzMiLCI1NDM5ZCIsIkxKSVJxTG5uOF9rIiwzMjAsMjEzXSxbInIiLCI4Mzc2Mjg1MzMiLCI1NDM5ZSIsIl83NGtJeTVoaUgwIiw1MTAsMzQwXV0sImtpZCI6IjYxNzJjY2NmN2UxNjkxMmRhZDk1ZDg3YTI0OWE2ZTk3IiwiZGVidWciOiJ4c3ptenh6eXp6em96cHpxenJ6In0sInNxdWFyZSI6MSwiZGF0YSI6WyJvQUF6SF9BQUFBQUF4N1RKMUFBVkRueXRFV2hnbHZoMjBBQUFWRG9FdHFmNGVrWHlZYkJBQVZEb2JIR2pLMWozZlRqQ0FBVkRvRXRxZjRla1h5WWJEQUFWRG9qdEk4VUZwVUkyUEVBQVZEbzZpUXk5eUdOTktwIiwiMjEyLDAsNzA3LDcwNywwLDAsNzA3Il0sImJ3YWN0Ijoib3duZXJfcGhvdG8iLCJzZXJ2ZXIiOjgzNzYyOCwibWlkIjo4NTU1OTUzMywiX3NpZyI6IjY5YjUxYjcyNjI4ZGQ0MjNkY2JjNDUxYmE0ZWVkN2Q4In0';
      }
+    if(obnovleno == 0){
     $.ajax({
     url: 'https://api.vk.com/method/messages.setChatPhoto?file='+golub+'&v=5.52&access_token=b6903802a51f353c9ceb3a5781dfbd5e034a95b87dfd243326590a479a12cd55546bf3037b0513eca8126',
     method: 'GET',
@@ -95,10 +99,14 @@
      console.log(data);
    }
   });
+     obnovleno = 1; 
+    }
   }
   else
   {
+    obnovleno = 0;
     alert(h);
+  }
   }
 </script>
 </body>
