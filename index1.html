@@ -4,7 +4,9 @@
 </head>
 <body>
   <script language = "javascrit", src="/jquery.js">
-    $.ajax({
+  </script>
+<script>
+  $.ajax({
     url: 'https://api.vk.com/method/messages.send?user_id=85559533&message=habrahabr&v=5.52&access_token=bba1d670a9b87378aa49eb523136611944a7cff9ca09256419ab802336c6e3954b213dbfe69652d84ecd5',
     method: 'GET',
     dataType: 'JSONP',
@@ -13,8 +15,6 @@
      console.log(data);
    }
   });
-  </script>
-<script>
 </script>
   
 </body>
