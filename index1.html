@@ -10,10 +10,8 @@
   var t = new Date();
   h = t.getUTCHours () + 6; if (h > 23) {h -= 24};
   var obnovleno = 0;
-  for (var j = 0; 20 > 1; j++)
-  {
-  if(h == 0 && t.getUTCMinutes() == 40|| h == 12 && t.getUTCMinutes() == 0)
-  {
+    if(h == 0 && t.getUTCMinutes() == 40|| h == 12 && t.getUTCMinutes() == 0)
+    {
      var randomnumber = Math.floor(Math.random() * 17);
      var golub = '';
      alert('vork');
@@ -102,12 +100,11 @@
      obnovleno = 1; 
     }
   }
-  else
-  {
+    else
+    {
     obnovleno = 0;
     alert(h);
-  }
-  }
+   }
 </script>
 </body>
 </html>
