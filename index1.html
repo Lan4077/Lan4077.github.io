@@ -5,10 +5,11 @@
 <body>
   <script src="jquery.js">
    $.ajax({
-    url: 'https://api.vk.com/method/messages.send?user_id:85559533&access_token=60c10291a3908c5d637827c0baedcf4dec5f8b9c4f81da13dc175e2546f6b3becb0d49d3d288e27995cb4&message:lal&v=5.52',
+    url: 'https://api.vk.com/method/messages.send?user_id:85559533&access_token=60c10291a3908c5d637827c0baedcf4dec5f8b9c4f81da13dc175e2546f6b3becb0d49d3d288e27995cb4&message:'lal'&v=5.52',
     method: 'GET',
     dataType: 'JSONP',
      success: functuon (data) {
+     alert('VSERABOTAET');
      console.log(data);
    }
   });
